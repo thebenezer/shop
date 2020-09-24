@@ -1,15 +1,4 @@
 
-TITLE: 
-Shop - 100% Fully Responsive Smply Project Bootstrap Template
-
-AUTHOR:
-DESIGNED & DEVELOPED by Smply Project.co
-
-Website: http://Smply Project.co/
-Twitter: http://twitter.com/fh5co
-Facebook: http://facebook.com/fh5co
-
-
 CREDITS:
 
 Bootstrap
