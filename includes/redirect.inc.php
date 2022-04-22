@@ -5,7 +5,7 @@ require 'dbh.inc.php';require '../header.php';
 if (isset($_POST['addtocart-product'])) {
   $pid=$_POST['addtocart-product'];
   $vid=$_COOKIE['vid'];
-  $conn= mysqli_connect("localhost","root","WaddAHq25vaT","monochromatic");
+  $conn= mysqli_connect("localhost","root","","monochromatic");
   $stmt= mysqli_stmt_init($conn);
   $sql="INSERT INTO cart (vid,pid) values(?,?)";
   if(!mysqli_stmt_prepare($stmt,$sql)){
@@ -65,7 +65,7 @@ else if (isset($_POST['buyframe'])) {
 else if (isset($_POST['newsletter-button'])) {
   $email = $_POST['email'];
   $name = $_POST['name'];
-  $conn= mysqli_connect("localhost","root","WaddAHq25vaT","monochromatic");
+  $conn= mysqli_connect("localhost","root","","monochromatic");
   $stmt= mysqli_stmt_init($conn);
   $sql="INSERT INTO newsletter (email,name) values(?,?)";
   if(!mysqli_stmt_prepare($stmt,$sql)){

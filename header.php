@@ -140,7 +140,7 @@
       <ul style="padding-left:70%;">
         <li class="shopping-cart"><a href="cart.php" class="cart"><span>
         <?php
-        $conn= mysqli_connect("localhost","root","WaddAHq25vaT","monochromatic");
+        $conn= mysqli_connect("localhost","root","","monochromatic");
         $vid=$_COOKIE['vid'];
         $sql = "SELECT count(*)as cnt from cart where vid=?;";
         $stmt= mysqli_stmt_init($conn);
@@ -165,7 +165,7 @@
         <!-- <ul>
 					<li class="shopping-cart"><a href="cart.php" class="cart"><span> -->
 					<?php
-					// $conn= mysqli_connect("localhost","root","WaddAHq25vaT","monochromatic");
+					// $conn= mysqli_connect("localhost","root","","monochromatic");
           // $vid=$_COOKIE['vid'];
           // $sql = "SELECT count(*)as cnt from cart where vid=?;";
           // $stmt= mysqli_stmt_init($conn);

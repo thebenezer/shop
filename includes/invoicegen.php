@@ -2,7 +2,7 @@
 function generate_invoicenum()
 {
 
-  $conn= mysqli_connect("localhost","root","WaddAHq25vaT","monochromatic");
+  $conn= mysqli_connect("localhost","root","","monochromatic");
   $invoiceid=0;
   $sql = "SELECT max(sno)as snum from invoicenumber;";
   $stmt= mysqli_stmt_init($conn);
@@ -28,7 +28,7 @@ function generate_invoicenum()
       mysqli_close($conn);
       $invoiceid=date("Ymd").$num;
       echo '<p>'.$num.'</p><br><p>'.$invoiceid.' </p>';
-      $conn2= mysqli_connect("localhost","root","WaddAHq25vaT","monochromatic");
+      $conn2= mysqli_connect("localhost","root","","monochromatic");
       $sql2="INSERT INTO invoicenumber (sno,invoicenum) values(?,?)";
       $stmt2= mysqli_stmt_init($conn2);
       if(!mysqli_stmt_prepare($stmt2,$sql2)){

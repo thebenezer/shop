@@ -2,7 +2,7 @@
 
 $servername="localhost";
 $dbUsername="root";
-$dbPassword="WaddAHq25vaT";
+$dbPassword="";
 $dbName="monochromatic";
 
 $conn= mysqli_connect($servername,$dbUsername,$dbPassword,$dbName);

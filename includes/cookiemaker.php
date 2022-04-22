@@ -25,7 +25,7 @@ function checkcookiename($conn,$randstr)
 }
 function createcookie()
 {
-  $conn= mysqli_connect("localhost","root","WaddAHq25vaT","monochromatic");
+  $conn= mysqli_connect("localhost","root","","monochromatic");
   $val="VISITOR-";
   $str="abcdefghijklmnopqrstuvwxyz";
   $randstr=substr(str_shuffle($str),0,5);
@@ -37,7 +37,7 @@ function createcookie()
     $val=$val.$randstr;
     $check=checkcookiename($conn,$val);
   }
-  $conn2= mysqli_connect("localhost","root","WaddAHq25vaT","monochromatic");
+  $conn2= mysqli_connect("localhost","root","","monochromatic");
   $sql2="INSERT INTO visitors (vid) values(?)";
   $stmt2= mysqli_stmt_init($conn2);
   if(!mysqli_stmt_prepare($stmt2,$sql2)){

@@ -19,7 +19,7 @@ require 'includes/dbh.inc.php';?>
         exit();
       }
       else {
-        mysqli_stmt_bind_param($stmt, 's',$vid);
+        // mysqli_stmt_bind_param($stmt, 's',$vid);
         mysqli_stmt_execute($stmt);
         $result = $stmt->get_result();
         if ($result->num_rows >0) {

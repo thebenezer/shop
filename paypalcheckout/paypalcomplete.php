@@ -44,7 +44,7 @@ class GetOrder
     $response = $client->execute(new OrdersGetRequest($orderId));
 
     //SAVING ORDER ID AND PAYER DETAILS
-    $conn= mysqli_connect("localhost","root","WaddAHq25vaT","monochromatic");
+    $conn= mysqli_connect("localhost","root","","monochromatic");
     $sql="INSERT INTO orders (orderID,intent,status,invoiceID,total_amount,currency_code,fname,lname,email)
            values (?,?,?,?,?,?,?,?,?)";
     $stmt= mysqli_stmt_init($conn2);
@@ -98,7 +98,7 @@ $json = file_get_contents('php://input');
 $data = json_decode($json);
 $orderid = $data->orderID;
 $ordid=$orderid.'ebe';
-$conn= mysqli_connect("localhost","root","WaddAHq25vaT","monochromatic");
+$conn= mysqli_connect("localhost","root","","monochromatic");
 $stmt= mysqli_stmt_init($conn);
 $sql="INSERT INTO simplyorder (ordid) values ('$ordid');";
 mysqli_query($conn,$sql);

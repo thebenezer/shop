@@ -122,7 +122,7 @@ if (!isset($_SESSION['doneonce'])) {
 
                 $vid =$_COOKIE['vid'];
                 $empty=0;
-                $conn= mysqli_connect("localhost","root","WaddAHq25vaT","monochromatic");
+                $conn= mysqli_connect("localhost","root","","monochromatic");
                 $sql = "SELECT pid,quantity FROM cart WHERE vid=?;";
                 $stmt= mysqli_stmt_init($conn);
                 if(!mysqli_stmt_prepare($stmt,$sql)){

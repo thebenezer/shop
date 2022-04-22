@@ -1,5 +1,5 @@
 <?php
-$conn= mysqli_connect("localhost","root","WaddAHq25vaT","monochromatic");
+$conn= mysqli_connect("localhost","root","","monochromatic");
 
 function uploadPic($picfile,$picture)
 {
