@@ -31,7 +31,7 @@ require 'includes/dbh.inc.php';?>
           $pic=$row['pic'];
           echo '<div class="col-md-4 text-center animate-box">
             <div class="product">
-              <div class="product-grid" style="background-image:url(images/'.htmlspecialchars($pic).');">
+              <div class="product-grid" style="background-image:url(images/prodImage/'.htmlspecialchars($pic).');">
                 <div class="inner">
                   <p>
                    <form style="padding-top:300px;" action="includes/redirect.inc.php" method="post">

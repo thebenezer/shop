@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 5.1.3
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Sep 07, 2020 at 03:02 AM
--- Server version: 8.0.18
--- PHP Version: 7.3.14
+-- Host: localhost
+-- Generation Time: Apr 26, 2022 at 05:14 AM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -29,10 +28,10 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `cart` (
-  `vid` varchar(30) COLLATE utf8mb4_general_ci NOT NULL,
-  `pid` varchar(10) COLLATE utf8mb4_general_ci NOT NULL,
-  `quantity` int(11) DEFAULT '1'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `vid` varchar(30) NOT NULL,
+  `pid` varchar(10) NOT NULL,
+  `quantity` int(11) DEFAULT 1
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `cart`
@@ -44,6 +43,7 @@ INSERT INTO `cart` (`vid`, `pid`, `quantity`) VALUES
 ('VISITOR-fwyj', 'p2', 3),
 ('VISITOR-mziuc', 'p1', 1),
 ('VISITOR-mziuc', 'p2', 1),
+('VISITOR-tagiz', 'p1', 1),
 ('VISITOR-yfbl', 'p1', 4);
 
 -- --------------------------------------------------------
@@ -53,9 +53,9 @@ INSERT INTO `cart` (`vid`, `pid`, `quantity`) VALUES
 --
 
 CREATE TABLE `customer` (
-  `cid` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `fname` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `lname` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL
+  `cid` varchar(20) CHARACTER SET utf8mb4 NOT NULL,
+  `fname` varchar(256) CHARACTER SET utf8mb4 DEFAULT NULL,
+  `lname` varchar(256) CHARACTER SET utf8mb4 DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -66,18 +66,18 @@ CREATE TABLE `customer` (
 
 CREATE TABLE `customer_details` (
   `custnum` int(11) NOT NULL,
-  `invoicenum` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `fname` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `lname` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `phno` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `email` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `address1` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `address2` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `state` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `country` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `zipcode` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `notes` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT 'none',
-  `pwd` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT 'none'
+  `invoicenum` varchar(15) CHARACTER SET utf8mb4 DEFAULT NULL,
+  `fname` varchar(50) CHARACTER SET utf8mb4 DEFAULT NULL,
+  `lname` varchar(50) CHARACTER SET utf8mb4 DEFAULT NULL,
+  `phno` varchar(15) CHARACTER SET utf8mb4 DEFAULT NULL,
+  `email` varchar(100) CHARACTER SET utf8mb4 DEFAULT NULL,
+  `address1` varchar(200) CHARACTER SET utf8mb4 DEFAULT NULL,
+  `address2` varchar(200) CHARACTER SET utf8mb4 DEFAULT NULL,
+  `state` varchar(50) CHARACTER SET utf8mb4 DEFAULT NULL,
+  `country` varchar(50) CHARACTER SET utf8mb4 DEFAULT NULL,
+  `zipcode` varchar(20) CHARACTER SET utf8mb4 DEFAULT NULL,
+  `notes` varchar(200) CHARACTER SET utf8mb4 DEFAULT 'none',
+  `pwd` varchar(500) CHARACTER SET utf8mb4 DEFAULT 'none'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -135,7 +135,8 @@ INSERT INTO `customer_details` (`custnum`, `invoicenum`, `fname`, `lname`, `phno
 (62, '202005081008', 'R', 'BALASUBRAMANI', '09880819910', 'ebee21399@gmail.com', 'G-1483 , 8th cross, HAL East Extn', 'Marathahalli', 'India', 'Karnataka', '560037', 'none', 'none'),
 (63, '202005091009', 'Ebenezer', 'B', '09880819910', 'eben17cs@cmrit.ac.in', 'G-1483 , 8th cross, HAL East Extn', 'Marathahalli', 'India', 'Karnataka', '560037', 'none', 'none'),
 (64, '202005091010', 'Ebenezer', 'B', '09880819910', 'eben17cs@cmrit.ac.in', 'G-1483 , 8th cross, HAL East Extn', 'Marathahalli', 'India', 'Karnataka', '560037', 'none', 'none'),
-(65, '202005101011', 'Ebenezer', 'B', '09880819910', 'ebee21399@gmail.com', 'G-1483 , 8th cross, HAL East Extn', 'Marathahalli', 'India', 'Karnataka', '560037', 'none', 'none');
+(65, '202005101011', 'Ebenezer', 'B', '09880819910', 'ebee21399@gmail.com', 'G-1483 , 8th cross, HAL East Extn', 'Marathahalli', 'India', 'Karnataka', '560037', 'none', 'none'),
+(66, '202204221012', 'ebe', 'b', '111', '111@gmail.com', '1233', '123', 'kar', 'ind', '12', 'none', 'none');
 
 -- --------------------------------------------------------
 
@@ -145,7 +146,7 @@ INSERT INTO `customer_details` (`custnum`, `invoicenum`, `fname`, `lname`, `phno
 
 CREATE TABLE `invoicenumber` (
   `sno` int(11) DEFAULT NULL,
-  `invoicenum` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL
+  `invoicenum` varchar(15) CHARACTER SET utf8mb4 NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -164,7 +165,8 @@ INSERT INTO `invoicenumber` (`sno`, `invoicenum`) VALUES
 (1008, '202005081008'),
 (1009, '202005091009'),
 (1010, '202005091010'),
-(1011, '202005101011');
+(1011, '202005101011'),
+(1012, '202204221012');
 
 -- --------------------------------------------------------
 
@@ -173,11 +175,11 @@ INSERT INTO `invoicenumber` (`sno`, `invoicenum`) VALUES
 --
 
 CREATE TABLE `newsletter` (
-  `email` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `name` varchar(50) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `subscribe_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `email` varchar(100) DEFAULT NULL,
+  `name` varchar(50) DEFAULT NULL,
+  `subscribe_time` timestamp NULL DEFAULT current_timestamp(),
   `unsubscribe` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `newsletter`
@@ -194,16 +196,16 @@ INSERT INTO `newsletter` (`email`, `name`, `subscribe_time`, `unsubscribe`) VALU
 
 CREATE TABLE `orders` (
   `id` int(11) NOT NULL,
-  `orderID` varchar(30) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `intent` varchar(15) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `status` varchar(15) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `invoiceID` varchar(20) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `orderID` varchar(30) DEFAULT NULL,
+  `intent` varchar(15) DEFAULT NULL,
+  `status` varchar(15) DEFAULT NULL,
+  `invoiceID` varchar(20) DEFAULT NULL,
   `total_amount` decimal(11,4) DEFAULT NULL,
-  `currency_code` varchar(4) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `email` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `fname` varchar(30) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `lname` varchar(30) COLLATE utf8mb4_general_ci DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `currency_code` varchar(4) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `fname` varchar(30) DEFAULT NULL,
+  `lname` varchar(30) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `orders`
@@ -246,15 +248,15 @@ INSERT INTO `orders` (`id`, `orderID`, `intent`, `status`, `invoiceID`, `total_a
 
 CREATE TABLE `order_items` (
   `num_ofprod` int(11) NOT NULL,
-  `orderID` varchar(30) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `invoiceID` varchar(20) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `item_name` varchar(127) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `description` varchar(40) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `orderID` varchar(30) DEFAULT NULL,
+  `invoiceID` varchar(20) DEFAULT NULL,
+  `item_name` varchar(127) DEFAULT NULL,
+  `description` varchar(40) DEFAULT NULL,
   `quantity` int(2) DEFAULT NULL,
   `unit_amt` decimal(10,3) DEFAULT NULL,
-  `currency_code` varchar(5) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `sku` varchar(10) COLLATE utf8mb4_general_ci DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `currency_code` varchar(5) DEFAULT NULL,
+  `sku` varchar(10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `order_items`
@@ -273,16 +275,16 @@ INSERT INTO `order_items` (`num_ofprod`, `orderID`, `invoiceID`, `item_name`, `d
 --
 
 CREATE TABLE `products` (
-  `pid` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `name` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `quantity` int(11) DEFAULT '0',
-  `price` decimal(12,2) DEFAULT '20.00',
-  `description` varchar(3000) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `pic` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `subpic1` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `subpic2` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `category` int(11) DEFAULT '1',
-  `neworsale` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL DEFAULT 'New'
+  `pid` varchar(10) CHARACTER SET utf8mb4 NOT NULL,
+  `name` varchar(256) CHARACTER SET utf8mb4 NOT NULL,
+  `quantity` int(11) DEFAULT 0,
+  `price` decimal(12,2) DEFAULT 20.00,
+  `description` varchar(3000) CHARACTER SET utf8mb4 DEFAULT NULL,
+  `pic` varchar(256) CHARACTER SET utf8mb4 DEFAULT NULL,
+  `subpic1` varchar(256) CHARACTER SET utf8mb4 NOT NULL,
+  `subpic2` varchar(256) CHARACTER SET utf8mb4 DEFAULT NULL,
+  `category` int(11) DEFAULT 1,
+  `neworsale` varchar(30) CHARACTER SET utf8mb4 NOT NULL DEFAULT 'New'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -290,13 +292,12 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`pid`, `name`, `quantity`, `price`, `description`, `pic`, `subpic1`, `subpic2`, `category`, `neworsale`) VALUES
-('p1', 'Hauteville Concrete Rocking Chair', 5, '20.00', '.....', 'product-2.jpg', '', NULL, 1, 'New'),
-('p2', 'Pavilion Speaker', 4, '30.00', '.....', 'product-3.jpg', '', NULL, 1, 'New'),
-('p3', 'Ligomancer Bling', 5, '40.00', '.....', 'product-1.jpg', '', NULL, 1, 'New'),
-('p4', 'Alato Cabinet', 5, '40.00', '.....', 'product-2.jpg', '', NULL, 1, 'New'),
-('p5', 'Earing Wireless', 6, '30.00', '.....', 'product-2.jpg', '', NULL, 1, 'New'),
-('p6', 'Sculptural Coffee Table', 6, '20.00', '.....', 'product-2.jpg', '', NULL, 1, 'New'),
-('p9', 'Ebenezer B', 11, '10.30', 'blingbling', 'product-2.jpg', '.', '.', 1, 'New');
+('p1', 'Airship', 5, '20.00', '.....', 'blimp.jpg', '', NULL, 1, 'New'),
+('p2', 'Bare Your Fangs', 4, '30.00', '.....', 'smokesnake.jpg', '', NULL, 1, 'New'),
+('p3', 'Conflict', 5, '40.00', '.....', 'conflict.jpg', '', NULL, 1, 'New'),
+('p4', 'Peace Grenade', 5, '40.00', '.....', 'peacegrenade.jpg', '', NULL, 1, 'New'),
+('p5', 'We\'re All The Same', 6, '30.00', '.....', 'allthesame.jpg', '', NULL, 1, 'New'),
+('p6', 'Pop', 6, '20.00', '.....', 'popballoon.jpg', '', NULL, 1, 'New');
 
 -- --------------------------------------------------------
 
@@ -306,8 +307,8 @@ INSERT INTO `products` (`pid`, `name`, `quantity`, `price`, `description`, `pic`
 
 CREATE TABLE `simplyorder` (
   `id` int(11) NOT NULL,
-  `ordid` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `ordid` varchar(256) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `simplyorder`
@@ -353,8 +354,8 @@ INSERT INTO `simplyorder` (`id`, `ordid`) VALUES
 --
 
 CREATE TABLE `visitors` (
-  `vid` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `visit_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `vid` varchar(30) CHARACTER SET utf8mb4 NOT NULL,
+  `visit_date` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -366,7 +367,9 @@ INSERT INTO `visitors` (`vid`, `visit_date`) VALUES
 ('VISITOR-eoqi', '2020-04-30 07:39:42'),
 ('VISITOR-fwyj', '2020-04-30 02:46:50'),
 ('VISITOR-mziuc', '2020-05-07 10:32:23'),
+('VISITOR-ovqpf', '2022-04-26 01:21:22'),
 ('VISITOR-qkafw', '2020-08-01 16:24:08'),
+('VISITOR-tagiz', '2022-04-22 01:57:13'),
 ('VISITOR-vskuf', '2020-08-02 01:17:48'),
 ('VISITOR-wumqd', '2020-08-03 16:56:21'),
 ('VISITOR-wxyt', '2020-05-01 02:48:58'),
@@ -441,7 +444,7 @@ ALTER TABLE `visitors`
 -- AUTO_INCREMENT for table `customer_details`
 --
 ALTER TABLE `customer_details`
-  MODIFY `custnum` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
+  MODIFY `custnum` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
 
 --
 -- AUTO_INCREMENT for table `orders`

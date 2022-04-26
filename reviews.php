@@ -55,7 +55,7 @@
 	</div>
 
 
-	<!-- <div id="fh5co-counter" class="fh5co-bg fh5co-counter" style="background-image:url(images/img_bg_5.jpg);">
+	<!-- <div id="fh5co-counter" class="fh5co-bg fh5co-counter" style="background-image:url(images/smokesnake.jpg);">
 		<div class="container">
 			<div class="row">
 				<div class="display-t">

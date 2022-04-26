@@ -38,7 +38,7 @@ require 'includes/dbh.inc.php';
           $pic=$row['pic'];
           echo '<div class="col-md-4 text-center animate-box">
             <div class="product">
-              <div class="product-grid" style="background-image:url(images/'.htmlspecialchars($pic).');">
+              <div class="product-grid" style="background-image:url(images/prodImages/'.htmlspecialchars($pic).');">
                 <div class="inner">
                   <p>
                     <a href="product.php?action=add&pid='.htmlspecialchars($pid).'" class="icon"><i class="icon-shopping-cart"></i></a>

@@ -24,7 +24,7 @@
 						</div>
 					</div>
 					<div class="col-md-6">
-						<img class="img-responsive" src="images/img_bg_1.jpg" alt="about">
+						<img class="img-responsive" src="images/allthesame.jpg" alt="about">
 					</div>
 				</div>
 			</div>

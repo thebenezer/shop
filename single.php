@@ -55,7 +55,7 @@
 						<div class="item">
 							<div class="active text-center">
 								<figure>
-									<?php echo '<img src="images/'.htmlspecialchars($pic).'" alt="product-image" >'; ?>
+									<?php echo '<img src="images/prodImages/'.htmlspecialchars($pic).'" alt="product-image" >'; ?>
 
 								</figure>
 							</div>
@@ -64,7 +64,7 @@
 						<div class="item">
 							<div class="active text-center">
 								<figure>
-									<?php echo '<img src="images/'.htmlspecialchars($pic).'" alt="product-image" >'; ?>
+									<?php echo '<img src="images/prodImages/'.htmlspecialchars($pic).'" alt="product-image" >'; ?>
 								</figure>
 							</div>
 						</div>

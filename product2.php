@@ -36,7 +36,7 @@
     <div class="row">
       <div class="col-md-4 text-center animate-box">
         <div class="product">
-          <div class="product-grid" style="background-image:url(images/product-1.jpg);">
+          <div class="product-grid" style="background-image:url(images/prodImages/product-1.jpg);">
             <div class="inner">
               <p>
                 <a href="single.php" class="icon"><i class="icon-shopping-cart"></i></a>
@@ -52,7 +52,7 @@
       </div>
       <div class="col-md-4 text-center animate-box">
         <div class="product">
-          <div class="product-grid" style="background-image:url(images/product-2.jpg);">
+          <div class="product-grid" style="background-image:url(images/prodImages/product-2.jpg);">
             <div class="inner">
               <p>
                 <a href="single.php" class="icon"><i class="icon-shopping-cart"></i></a>
@@ -68,7 +68,7 @@
       </div>
       <div class="col-md-4 text-center animate-box">
         <div class="product">
-          <div class="product-grid" style="background-image:url(images/product-3.jpg);">
+          <div class="product-grid" style="background-image:url(images/prodImages/product-3.jpg);">
             <div class="inner">
               <p>
                 <a href="single.php" class="icon"><i class="icon-shopping-cart"></i></a>
@@ -86,7 +86,7 @@
     <div class="row">
       <div class="col-md-4 text-center animate-box">
         <div class="product">
-          <div class="product-grid" style="background-image:url(images/product-4.jpg);">
+          <div class="product-grid" style="background-image:url(images/prodImages/product-4.jpg);">
             <div class="inner">
               <p>
                 <a href="single.php" class="icon"><i class="icon-shopping-cart"></i></a>
@@ -102,7 +102,7 @@
       </div>
       <div class="col-md-4 text-center animate-box">
         <div class="product">
-          <div class="product-grid" style="background-image:url(images/product-5.jpg);">
+          <div class="product-grid" style="background-image:url(images/prodImages/product-5.jpg);">
             <div class="inner">
               <p>
                 <a href="single.php" class="icon"><i class="icon-shopping-cart"></i></a>
@@ -118,7 +118,7 @@
       </div>
       <div class="col-md-4 text-center animate-box">
         <div class="product">
-          <div class="product-grid" style="background-image:url(images/product-6.jpg);">
+          <div class="product-grid" style="background-image:url(images/prodImages/product-6.jpg);">
             <div class="inner">
               <p>
                 <a href="single.php" class="icon"><i class="icon-shopping-cart"></i></a>
@@ -136,7 +136,7 @@
     <div class="row">
       <div class="col-md-4 text-center animate-box">
         <div class="product">
-          <div class="product-grid" style="background-image:url(images/product-7.jpg);">
+          <div class="product-grid" style="background-image:url(images/prodImages/product-7.jpg);">
             <div class="inner">
               <p>
                 <a href="single.php" class="icon"><i class="icon-shopping-cart"></i></a>

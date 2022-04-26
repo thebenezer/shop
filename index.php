@@ -4,56 +4,41 @@
 	<aside id="fh5co-hero" class="js-fullheight">
 		<div class="flexslider js-fullheight">
 			<ul class="slides">
-		   	<li style="background-image: url(images/img_bg_1.jpg);">
-		   		<div class="overlay-gradient"></div>
+		   	<li style="background-image: url(images/prodImages/peacegrenade.jpg);">
 		   		<div class="container">
 		   			<div class="col-md-6 col-md-offset-3 col-md-pull-3 js-fullheight slider-text">
 		   				<div class="slider-text-inner">
 		   					<div class="desc">
-		   						<span class="price">$800</span>
-		   						<h2>Alato Cabinet</h2>
-		   						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
-			   					<p><a href="product.php" class="btn btn-primary btn-outline btn-lg">Shop Now</a></p>
-		   					</div>
-		   				</div>
-		   			</div>
-		   		</div>
-		   	</li>
-		   	<li style="background-image: url(images/img_bg_2.jpg);">
-		   		<div class="container">
-		   			<div class="col-md-6 col-md-offset-3 col-md-pull-3 js-fullheight slider-text">
-		   				<div class="slider-text-inner">
-		   					<div class="desc">
-		   						<span class="price">$530</span>
-		   						<h2>The Haluz Rocking Chair</h2>
-		   						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
+		   						<span class="price">$50</span>
+		   						<h2>Peace Grenade</h2>
+		   						<p style="color: #f0f0f0;">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
 			   					<p><a href="product.php" class="btn btn-primary btn-outline btn-lg">Purchase Now</a></p>
 		   					</div>
 		   				</div>
 		   			</div>
 		   		</div>
 		   	</li>
-		   	<li style="background-image: url(images/img_bg_3.jpg);">
+		   	<li style="background-image: url(images/prodImages/popballoon.jpg);">
 		   		<div class="container">
 		   			<div class="col-md-6 col-md-offset-3 col-md-pull-3 js-fullheight slider-text">
 		   				<div class="slider-text-inner">
 		   					<div class="desc">
-		   						<span class="price">$750</span>
-		   						<h2>Alato Cabinet</h2>
-		   						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
+		   						<span class="price">$50</span>
+		   						<h2>Overkill</h2>
+		   						<p>Complicating things beyond necessary.</p>
 			   					<p><a href="product.php" class="btn btn-primary btn-outline btn-lg">Purchase Now</a></p>
 		   					</div>
 		   				</div>
 		   			</div>
 		   		</div>
 		   	</li>
-		   	<li style="background-image: url(images/img_bg_4.jpg);">
+		   	<li style="background-image: url(images/prodImages/blimp.jpg);">
 		   		<div class="container">
 		   			<div class="col-md-6 col-md-offset-3 col-md-pull-3 js-fullheight slider-text">
 		   				<div class="slider-text-inner">
 		   					<div class="desc">
-		   						<span class="price">$540</span>
-		   						<h2>The WW Chair</h2>
+		   						<span class="price">$40</span>
+		   						<h2>Airship</h2>
 		   						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
 			   					<p><a href="product.php" class="btn btn-primary btn-outline btn-lg">Purchase Now</a></p>
 		   					</div>
@@ -114,7 +99,7 @@
 			<div class="row">
 				<div class="col-md-4 text-center animate-box">
 					<div class="product">
-						<div class="product-grid" style="background-image:url(images/product-1.jpg);">
+						<div class="product-grid" style="background-image:url(images/prodImages/blimp.jpg);">
 							<div class="inner">
 								<p>
 									<a href="index.php?action=add&pid=p1" class="icon"><i class="icon-shopping-cart"></i></a>
@@ -123,14 +108,14 @@
 							</div>
 						</div>
 						<div class="desc">
-							<h3><a href="single.php?pid=p1">Hauteville Concrete Rocking Chair</a></h3>
-							<span class="price">$350</span>
+							<h3><a href="single.php?pid=p1">Airship</a></h3>
+							<span class="price">$20</span>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-4 text-center animate-box">
 					<div class="product">
-						<div class="product-grid" style="background-image:url(images/product-2.jpg);">
+						<div class="product-grid" style="background-image:url(images/prodImages/smokesnake.jpg);">
 							<span class="sale">Sale</span>
 							<div class="inner">
 								<p>
@@ -140,14 +125,14 @@
 							</div>
 						</div>
 						<div class="desc">
-							<h3><a href="single.php?pid=p2">Pavilion Speaker</a></h3>
-							<span class="price">$600</span>
+							<h3><a href="single.php?pid=p2">Bare Your Fangs</a></h3>
+							<span class="price">$30</span>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-4 text-center animate-box">
 					<div class="product">
-						<div class="product-grid" style="background-image:url(images/product-3.jpg);">
+						<div class="product-grid" style="background-image:url(images/prodImages/allthesame.jpg);">
 							<div class="inner">
 								<p>
 									<a href="index.php?action=add&pid=p3" class="icon"><i class="icon-shopping-cart"></i></a>
@@ -156,8 +141,8 @@
 							</div>
 						</div>
 						<div class="desc">
-							<h3><a href="single.php?pid=p3">Ligomancer</a></h3>
-							<span class="price">$780</span>
+							<h3><a href="single.php?pid=p3">We're All The Same</a></h3>
+							<span class="price">$30</span>
 						</div>
 					</div>
 				</div>
@@ -218,7 +203,7 @@
 	</div>
 
 
-	<!-- <div id="fh5co-counter" class="fh5co-bg fh5co-counter" style="background-image:url(images/img_bg_5.jpg);">
+	<!-- <div id="fh5co-counter" class="fh5co-bg fh5co-counter" style="background-image:url(images/prodImages/smokesnake.jpg);">
 		<div class="container">
 			<div class="row">
 				<div class="display-t">
